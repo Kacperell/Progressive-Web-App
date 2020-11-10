@@ -1,0 +1,29 @@
+.FormWithDateSaving{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    // justify-content: center;
+ align-items: center;
+
+ #textFieldAddNote{
+     width: 90%;
+ }
+    #buttonAddNote{
+        margin-top: 10px;
+        // width: 300px;
+        padding: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+    }
+    #notesLisItem{
+        width: 400px;
+        text-align: center;
+        max-width: 70%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+  
+    }
+ 
+}

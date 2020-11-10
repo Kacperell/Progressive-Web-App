@@ -20,7 +20,6 @@ function Home() {
 
                 {screens.map((screen, i) => (
                     <Link key={i} to={screen.path}>
-
                         <ListItem button >
                             <ListItemText primary={screen.titleInList} />
                         </ListItem>

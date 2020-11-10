@@ -14,8 +14,9 @@ function Header({ title, backButton }) {
     return (
         <div className='header'>
             {backButton == 1 &&
+
                 <Link to="/">
-                    <IconButton color='white' onClick={(e) => console.log("fsafs")}>
+                    <IconButton style={{ color: "white" }} >
                         <ArrowBackIcon />
                     </IconButton>
                 </Link>}
