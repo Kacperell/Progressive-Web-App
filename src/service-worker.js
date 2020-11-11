@@ -70,3 +70,31 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!
+self.addEventListener('sync', function (event) {
+  if (event.id == 'update-leaderboard') {
+    event.waitUntil(
+      caches.open('mygame-dynamic').then(function (cache) {
+        return cache.add('/leaderboard.json');
+      }),
+    );
+  }
+});
+
+self.addEventListener('fetch', function (event) {
+  event.respondWith(
+    caches.open('mysite-dynamic').then(function (cache) {
+      return cache.match(event.request).then(function (response) {
+        var fetchPromise = fetch(event.request).then(function (networkResponse) {
+          cache.put(event.request, networkResponse.clone());
+          return networkResponse;
+        });
+        return response || fetchPromise;
+      });
+    }),
+  );
+});
+//!!!!!!!!!!!!!!!!!!!!!
