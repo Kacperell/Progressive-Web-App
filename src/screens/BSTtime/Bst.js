@@ -59,10 +59,7 @@ function Bst() {
         let hrs = (s - mins) / 60;
         return hrs + ':' + mins + ':' + secs + '.' + ms;
     }
-    function roundTo(value, places) {
-        let power = Math.pow(10, places);
-        return Math.round(value * power) / power;
-    }
+
     const startBst = () => {
         let tree = new BST();
         const t0 = performance.now()
