@@ -1,0 +1,12 @@
+.audioRecorder{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  button{
+      width: 150px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+}
