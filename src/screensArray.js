@@ -7,6 +7,7 @@ import GPS from './screens/GPS/GPS';
 import Accelerometer from './screens/Accelerometer/Accelerometer';
 import AudioRecorder from './screens/AudioRecorder/AudioRecorder';
 import VideoYT from './screens/VideoYT/VideoYT';
+import ListViewScreen from './screens/ListViewScreen/ListViewScreen';
 // import { FALSE, TRUE } from 'node-sass';
 
 const screens = [
@@ -16,6 +17,7 @@ const screens = [
     { path: '/GPS', titleInList: 'Lokalizacja', header: <Header backButton={1} title='Lokalizacja' />, component: <GPS /> },
     { path: '/Accelerometer', titleInList: 'Akcelerometr i żyroskop', header: <Header backButton={1} title='Akcelerometr i żyroskop' />, component: <Accelerometer /> },
     { path: '/VideoYT', titleInList: 'Obsługa multimediów', header: <Header backButton={1} title='Obsługa multimediów' />, component: <VideoYT /> },
+    { path: '/ListViewScreen', titleInList: 'Dynamiczna lista', header: <Header backButton={1} title='Dynamiczna lista' />, component: <ListViewScreen /> },
     // { path: '/', titleInList: 'Home', header: <Header backButton={0} title='Home' />, component: <Home /> }
 ];
 
