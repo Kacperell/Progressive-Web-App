@@ -6,6 +6,7 @@ import Camera from './screens/Camera/Camera';
 import GPS from './screens/GPS/GPS';
 import Accelerometer from './screens/Accelerometer/Accelerometer';
 import AudioRecorder from './screens/AudioRecorder/AudioRecorder';
+import VideoYT from './screens/VideoYT/VideoYT';
 // import { FALSE, TRUE } from 'node-sass';
 
 const screens = [
@@ -14,7 +15,7 @@ const screens = [
     { path: '/Bst', titleInList: 'Binarne drzewo poszukiwań - Pomiar czasu', header: <Header backButton={1} title='Binarne drzewo poszukiwań - Pomiar czasu' />, component: <Bst /> },
     { path: '/GPS', titleInList: 'Lokalizacja', header: <Header backButton={1} title='Lokalizacja' />, component: <GPS /> },
     { path: '/Accelerometer', titleInList: 'Akcelerometr i żyroskop', header: <Header backButton={1} title='Akcelerometr i żyroskop' />, component: <Accelerometer /> },
-    { path: '/AudioRecorder', titleInList: 'Nagranie dźwieku', header: <Header backButton={1} title='Nagranie dźwieku' />, component: <AudioRecorder /> },
+    { path: '/VideoYT', titleInList: 'Obsługa multimediów', header: <Header backButton={1} title='Obsługa multimediów' />, component: <VideoYT /> },
     // { path: '/', titleInList: 'Home', header: <Header backButton={0} title='Home' />, component: <Home /> }
 ];
 
