@@ -1,0 +1,13 @@
+.alert-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.alert-screen__alert {
+    position: fixed;
+    bottom: 20px;
+
+}
