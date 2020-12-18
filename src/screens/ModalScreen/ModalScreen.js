@@ -47,19 +47,18 @@ function ModalScreen() {
             {/* <div style={modalStyle} className={classes.paper}> */}
             <h2 id="simple-modal-title">Modal</h2>
             <p id="simple-modal-description">
-                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-        </p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               </p>
 
         </div>
     );
 
     return (
         <div className='modalScreen'>
-            <Button variant="contained" color="primary" onClick={handleOpen}>
-                Open Modal
-        </Button>
+
+
             <Modal
-                //  className='modal'
+                className='modalScreen__modal'
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="simple-modal-title"
@@ -67,7 +66,13 @@ function ModalScreen() {
             >
                 {body}
             </Modal>
+
+            <Button variant="contained" color="primary" onClick={handleOpen}>
+                Open Modal
+        </Button>
+
         </div>
+
     );
 }
 
