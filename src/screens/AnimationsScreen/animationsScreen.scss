@@ -1,0 +1,25 @@
+.animationsScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animationsScreen__square {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 48px;
+    height: 48px;
+    background-color: gold;
+}
+
+.animationsScreen__square--opacity {
+    background-color: blue;
+}
+
+.animationsScreen__square--transform {
+    background-color: yellow;
+}
+
+.animationsScreen__square--rotate {
+    background-color: green;
+}
