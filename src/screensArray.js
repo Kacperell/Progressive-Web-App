@@ -12,7 +12,8 @@ import AnimationsScreen from './screens/AnimationsScreen/AnimationsScreen';
 import ComponentsScreen from './screens/ComponentsScreen/ComponentsScreen';
 import ModalScreen from './screens/ModalScreen/ModalScreen';
 import AlertScreen from './screens/AlertScreen/AlertScreen';
-// import { FALSE, TRUE } from 'node-sass';
+import DataSharing from './screens/DataSharing/DataSharing';
+
 
 const screens = [
     { path: '/FormWithDateSaving', titleInList: 'Formularz z zapisem do bazy', header: <Header backButton={1} title='Formularz z zapisem do bazy' />, component: <FormWithDateSaving /> },
@@ -26,6 +27,7 @@ const screens = [
     { path: '/ComponentsScreen', titleInList: 'Komponenty', header: <Header backButton={1} title='Komponenty' />, component: <ComponentsScreen /> },
     { path: '/ModalScreen', titleInList: 'Modal', header: <Header backButton={1} title='Modal' />, component: <ModalScreen /> },
     { path: '/AlertScreen', titleInList: 'Alert', header: <Header backButton={1} title='Alert' />, component: <AlertScreen /> },
+    { path: '/DataSharing', titleInList: 'Współdzielenie danych', header: <Header backButton={1} title='Współdzielenie danych' />, component: <DataSharing /> },
     // { path: '/', titleInList: 'Home', header: <Header backButton={0} title='Home' />, component: <Home /> }
 ];
 

@@ -11,6 +11,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import screens from './screensArray';
 import Home from './screens/Home/Home';
 import ComponentsScreen2 from './screens/ComponentsScreen/ComponentsScreen2';
+import DataSharing2 from './screens/DataSharing/DataSharing2';
 import Header from './screens/GlobalComponents/Header';
 const theme = createMuiTheme({
   palette: {
@@ -47,6 +48,11 @@ function App() {
             <Route path='/ComponentsScreen2'>
               <Header backButton={1} title='Komponenty drugi ekran' />
               <ComponentsScreen2 />
+            </Route>
+
+            <Route path='/DataSharing2/:number'>
+              <Header backButton={1} title='Współdzielenie danych' />
+              <DataSharing2 />
             </Route>
 
 
