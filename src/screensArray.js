@@ -1,6 +1,7 @@
 import Header from './screens/GlobalComponents/Header';
 import Home from './screens/Home/Home';
 import FormWithDateSaving from './screens/FormWithDateSaving/FormWithDateSaving';
+import DownloadingFiles from './screens/DownloadingFiles/DownloadingFiles';
 import Bst from './screens/BSTtime/Bst';
 import Camera from './screens/Camera/Camera';
 import GPS from './screens/GPS/GPS';
@@ -17,6 +18,7 @@ import DataSharing from './screens/DataSharing/DataSharing';
 
 const screens = [
     { path: '/FormWithDateSaving', titleInList: 'Formularz z zapisem do bazy', header: <Header backButton={1} title='Formularz z zapisem do bazy' />, component: <FormWithDateSaving /> },
+    { path: '/DownloadingFiles', titleInList: 'Pobieranie plików', header: <Header backButton={1} title='Pobieranie plików' />, component: <DownloadingFiles /> },
     { path: '/Camera', titleInList: 'Dostęp do aparatu', header: <Header backButton={1} title='Dostęp do aparatu' />, component: <Camera /> },
     { path: '/Bst', titleInList: 'Binarne drzewo poszukiwań - Pomiar czasu', header: <Header backButton={1} title='Binarne drzewo poszukiwań - Pomiar czasu' />, component: <Bst /> },
     { path: '/GPS', titleInList: 'Lokalizacja', header: <Header backButton={1} title='Lokalizacja' />, component: <GPS /> },
