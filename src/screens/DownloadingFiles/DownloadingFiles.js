@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '@material-ui/core/Button';
-
+import './DownloadingFiles.scss';
 function DownloadingFiles() {
     const [photoStatus, setPhotoStatus] = useState(false);
     const [movieStatus, setMovieStatus] = useState(false);
@@ -15,6 +15,30 @@ function DownloadingFiles() {
         return hrs + ':' + mins + ':' + secs + '.' + ms;
     }
     const downloadPhoto = () => {
+        setPhotoStatus(`Pobieranie`);
+        const t0 = performance.now()
+        fetch('https://upload.wikimedia.org/wikipedia/commons/7/78/Canyonlands_National_Park%E2%80%A6Needles_area_%286294480744%29.jpg')
+            .then(resp => resp.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = 'photo.jpg';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                console.log("pobrano!");
+                const t1 = performance.now()
+                const timeDifference = Math.round(t1 - t0);
+                const timeMs = msToTime(timeDifference);
+                setPhotoStatus(`Zdjęcie pobrane czasie:${timeMs}`);
+            })
+            .catch(() => console.log("error"));
+    }
+    const downloadMovie = () => {
+        setMovieStatus(`Pobieranie`);
+        const t0 = performance.now();
         fetch('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4')
             .then(resp => resp.blob())
             .then(blob => {
@@ -22,29 +46,32 @@ function DownloadingFiles() {
                 const a = document.createElement('a');
                 a.style.display = 'none';
                 a.href = url;
-                // the filename you want
                 a.download = 'movie.mp4';
-                // a.download = 'photo.jpg';
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
                 console.log("pobrano!");
+                const t1 = performance.now()
+                const timeDifference = Math.round(t1 - t0);
+                const timeMs = msToTime(timeDifference);
+                setMovieStatus(`Film został pobrany czasie:${timeMs}`);
             })
-            .catch(() => console.log("bład!"));
+            .catch(() => console.log("error"));
     }
     return (
-        <div className='DownloadingFiles'>
-            DownloadingFiles
+        <div className='downloadingFiles'>
             {photoStatus &&
                 <span>{photoStatus}</span>
             }
-            <Button onClick={https} variant="contained" color="primary">
+            <Button onClick={downloadPhoto} variant="contained" color="primary">
                 Pobierz zdjęcie (2,36 MB)
             </Button>
-            {photoStatus &&
+            {movieStatus &&
                 <span>{movieStatus}</span>
             }
-
+            <Button onClick={downloadMovie} variant="contained" color="primary">
+                Pobierz Film (158 MB)
+            </Button>
 
         </div>
     )

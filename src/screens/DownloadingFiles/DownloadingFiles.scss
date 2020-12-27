@@ -1,0 +1,11 @@
+.downloadingFiles {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
+        margin-bottom: 50px;
+    }
+}
