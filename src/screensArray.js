@@ -22,6 +22,7 @@ const screens = [
     { path: '/Camera', titleInList: 'Dostęp do aparatu', header: <Header backButton={1} title='Dostęp do aparatu' />, component: <Camera /> },
     { path: '/Bst', titleInList: 'Binarne drzewo poszukiwań - Pomiar czasu', header: <Header backButton={1} title='Binarne drzewo poszukiwań - Pomiar czasu' />, component: <Bst /> },
     { path: '/GPS', titleInList: 'Lokalizacja', header: <Header backButton={1} title='Lokalizacja' />, component: <GPS /> },
+    { path: '/AudioRecorder', titleInList: 'Nagrywanie dźwieku', header: <Header backButton={1} title='Nagrywanie dźwieku' />, component: <AudioRecorder /> },
     { path: '/Accelerometer', titleInList: 'Akcelerometr i żyroskop', header: <Header backButton={1} title='Akcelerometr i żyroskop' />, component: <Accelerometer /> },
     { path: '/VideoYT', titleInList: 'Obsługa multimediów', header: <Header backButton={1} title='Obsługa multimediów' />, component: <VideoYT /> },
     { path: '/ListViewScreen', titleInList: 'Dynamiczna lista', header: <Header backButton={1} title='Dynamiczna lista' />, component: <ListViewScreen /> },

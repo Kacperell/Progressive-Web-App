@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Button from '@material-ui/core/Button';
 import './DownloadingFiles.scss';
+import { v4 as uuidv4 } from 'uuid';
 function DownloadingFiles() {
     const [photoStatus, setPhotoStatus] = useState(false);
     const [movieStatus, setMovieStatus] = useState(false);
@@ -24,7 +25,7 @@ function DownloadingFiles() {
                 const a = document.createElement('a');
                 a.style.display = 'none';
                 a.href = url;
-                a.download = 'photo.jpg';
+                a.download = `photo-${uuidv4()}.jpg`;
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
@@ -46,7 +47,7 @@ function DownloadingFiles() {
                 const a = document.createElement('a');
                 a.style.display = 'none';
                 a.href = url;
-                a.download = 'movie.mp4';
+                a.download = `movie-${uuidv4()}.jpg`;
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
