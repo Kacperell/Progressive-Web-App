@@ -7,19 +7,28 @@ const MicRecorder = require('mic-recorder-to-mp3');
 
 function AudioRecorder() {
     const [fileAudio, setfileAudio] = useState(null);
+    const [isRecording, setIsRecording] = useState('');
+
     const recorder = new MicRecorder({
         bitRate: 128
     });
 
+
+
     const startRecording = async () => {
-        // request permission to use  microphone.
+        console.log('s1');
+        // request permission to use  microphone
+        // setIsRecording('Nagrywanie...');
         recorder.start().then(() => {
+
+            console.log('s2');
         }).catch((e) => {
             alert(e);
+            console.log(e);
+            // setIsRecording('Błąd');
+
             console.error(e);
         });
-
-
     }
     const stopRecording = async () => {
         recorder
@@ -30,10 +39,12 @@ function AudioRecorder() {
                     lastModified: Date.now()
                 });
                 setfileAudio(file);
+                setIsRecording('Nagrano');
 
             }).catch((e) => {
                 alert(e);
-                console.log(e);
+                setIsRecording('Błąd');
+                console.log('eee', e);
             });
     }
 
@@ -45,6 +56,7 @@ function AudioRecorder() {
     }
     return (
         <div className='audioRecorder'>
+            {isRecording}
             <Button onClick={startRecording} variant="contained" color="primary">
                 Nagraj
             </Button>

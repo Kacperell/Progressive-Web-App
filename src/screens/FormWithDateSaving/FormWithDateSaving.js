@@ -30,23 +30,10 @@ function FormWithDateSaving() {
             return;
         }
         storeData(textNote, selectValue, checkboxValues, radioValue);
-        let note = {
-            textNote,
-            selectValue,
-            checkboxValues,
-            radioValue
-        }
-        console.log(note);
-        let newNotes;
-        if (notes) {
-            newNotes = notes;
-        } else {
-            newNotes = [];
-        }
 
-        newNotes.push(textNote);
-        setNotes(newNotes);
         setTextNote('');
+        fetchNotes();
+
     }
     const [notes, setNotes] = useState([]);
     const [textNote, setTextNote] = useState('');
