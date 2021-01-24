@@ -19,8 +19,6 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormLabel from '@material-ui/core/FormLabel';
 function FormWithDateSaving() {
     const saveNoteToDb = () => {
-
-
         let checkboxValues = '';
         if (checkbox1) checkboxValues = checkboxValues + 'Check 1 ';
         if (checkbox1) checkboxValues = checkboxValues + 'Check 2 ';
@@ -30,7 +28,6 @@ function FormWithDateSaving() {
             return;
         }
         storeData(textNote, selectValue, checkboxValues, radioValue);
-
         setTextNote('');
         fetchNotes();
 
@@ -38,7 +35,6 @@ function FormWithDateSaving() {
     const [notes, setNotes] = useState([]);
     const [textNote, setTextNote] = useState('');
     const [selectValue, setSelectValue] = useState(null);
-
     const [checkbox1, setCheckbox1] = useState(false);
     const [checkbox2, setCheckbox2] = useState(false);
     const [checkbox3, setCheckbox3] = useState(false);
@@ -49,7 +45,6 @@ function FormWithDateSaving() {
         setNotes(notes);
     }
 
-
     useEffect(() => {
         fetchNotes();
     }, []);
@@ -58,7 +53,6 @@ function FormWithDateSaving() {
     const onChangeNote = (e) => {
         setTextNote(e.target.value);
     }
-
 
 
     const handleChangeRadioValue = (event) => {
