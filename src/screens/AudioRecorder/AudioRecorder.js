@@ -16,18 +16,10 @@ function AudioRecorder() {
 
 
     const startRecording = async () => {
-        console.log('s1');
-        // request permission to use  microphone
-        // setIsRecording('Nagrywanie...');
         recorder.start().then(() => {
-
-            console.log('s2');
         }).catch((e) => {
             alert(e);
             console.log(e);
-            // setIsRecording('Błąd');
-
-            console.error(e);
         });
     }
     const stopRecording = async () => {
@@ -44,7 +36,6 @@ function AudioRecorder() {
             }).catch((e) => {
                 alert(e);
                 setIsRecording('Błąd');
-                console.log('eee', e);
             });
     }
 

@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '90%',
         backgroundColor: theme.palette.background.paper,
         boxShadow: theme.shadows[5],
-        // padding: theme.spacing(2, 4, 3),
     },
 }));
 
@@ -44,7 +43,6 @@ function ModalScreen() {
 
     const body = (
         <div className='modalBody'>
-            {/* <div style={modalStyle} className={classes.paper}> */}
             <h2 id="simple-modal-title">Modal</h2>
             <p id="simple-modal-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

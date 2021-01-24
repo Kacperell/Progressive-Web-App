@@ -17,8 +17,6 @@ L.Marker.prototype.options.icon = DefaultIcon;
 function GPS() {
     const [location, setLocation] = useState(null);
     const mapEl = useRef(null);
-
-
     useEffect(() => {
 
         if ("geolocation" in navigator) {
@@ -32,8 +30,6 @@ function GPS() {
 
 
     }, []);
-
-
 
     return (
         <div className='gps'>

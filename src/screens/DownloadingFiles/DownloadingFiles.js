@@ -29,7 +29,7 @@ function DownloadingFiles() {
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
-                console.log("pobrano!");
+                console.log("pobrano");
                 const t1 = performance.now()
                 const timeDifference = Math.round(t1 - t0);
                 const timeMs = msToTime(timeDifference);
